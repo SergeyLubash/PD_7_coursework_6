@@ -3,7 +3,7 @@ from django.db import models
 
 
 class Ad(models.Model):
-    image = models.ImageField()
+    image = models.ImageField(upload_to='media/', null=True)
     title = models.CharField(max_length=100, verbose_name='Название товара')
     price = models.PositiveIntegerField()
     description = models.TextField()
